@@ -29,5 +29,5 @@ ps:
 
 fclean:
 	$(DC) down --rmi all --volumes
-	rm -rf ./${FRONT_DIR}/build
+	rm -rf ./${FRONT_DIR}/dist
 	rm -rf ./${FRONT_DIR}/node_modules
