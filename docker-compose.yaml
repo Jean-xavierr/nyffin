@@ -7,7 +7,7 @@ services:
     working_dir: "/frontend"
     volumes:
       - ./frontend:/frontend
-    command: "sh -c 'yarn install && yarn run start'"
+    command: "sh -c 'yarn install && yarn run dev'"
     # command: "sh -c 'sleep infinity'"
     ports:
       - "8080:3000"
