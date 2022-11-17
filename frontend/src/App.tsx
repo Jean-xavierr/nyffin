@@ -9,20 +9,21 @@ import NotFound from '~/src/views/NotFound';
 
 const App = () => {
   return (
-    <Router>
-      <Nav />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route>
-          <NotFound />
-        </Route>
-      </Switch>
-    </Router>
+    <Home />
+    // <Router>
+    //   <Nav />
+    //   <Switch>
+    //     <Route exact path="/">
+    //       <Home />
+    //     </Route>
+    //     <Route path="/about">
+    //       <About />
+    //     </Route>
+    //     <Route>
+    //       <NotFound />
+    //     </Route>
+    //   </Switch>
+    // </Router>
   );
 };
 
