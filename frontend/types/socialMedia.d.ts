@@ -2,6 +2,6 @@
 
 declare interface ISocialMedia {
   name: string;
-  icon: import('react').FC<{ className: string }>;
+  icon: import('react').FC<{ className?: string }>;
   url: string;
 }
