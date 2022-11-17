@@ -1,11 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Nav from "./components/Nav";
+import Nav from '~/src/components/Nav';
 
-import Home from "./views/Home";
-import About from "./views/About";
-import NotFound from "./views/NotFound";
+import Home from '~/src/views/Home';
+import About from '~/src/views/About';
+import NotFound from '~/src/views/NotFound';
 
 const App = () => {
   return (
