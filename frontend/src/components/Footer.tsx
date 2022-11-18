@@ -3,25 +3,39 @@ import SocialBar from '~/src/components/SocialBar';
 import NyffinLogo from './Svg/NyffinLogo';
 
 const Footer = () => {
-  return (
-    <React.Fragment>
-      <div className="w-full bg-nyffinBlack text-white">
-        <div className="w-[1090px] m-auto">
-          <div className="grid grid-cols-2">
-            <NyffinLogo />
-            <SocialBar className="w-[300px] flex basis-full" />
-            <p>nyffin.esport@gmail.com</p>
-            <div>
-              <a href="#About">About</a>
-              <a href="#Teams">Teams</a>
-              <a href="#Achievements">Achievements</a>
-            </div>
-          </div>
-          <p>2022, FR - Nyffin Esports.</p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
+	return (
+		<React.Fragment>
+			<div className="w-full bg-nyffinBlack text-white">
+				<div className="max-w-[950px] m-auto px-5">
+					<div className="py-10">
+						<div className="grid grid-cols-2 items-center gap-y-3">
+							<NyffinLogo className="w-[100px] h-[40px]" />
+							<SocialBar className="w-[300px] justify-self-end" />
+							<p>nyffin.esport@gmail.com</p>
+							<div className="justify-self-end font-alumniSans text-2xl w-[300px] flex justify-between">
+								<a href="#About" className=" hover:underline">
+									About
+								</a>
+								<span className="w-[1px] h-[22px] bg-white mt-1"></span>
+								<a href="#Teams" className=" hover:underline">
+									Teams
+								</a>
+								<span className="w-[1px] h-[22px] bg-white mt-1"></span>
+								<a href="#Achievements" className=" hover:underline">
+									Achievements
+								</a>
+							</div>
+						</div>
+					</div>
+					<div className="flex justify-between font-alumniSans border-t py-2">
+						<p className=" flex-grow">2022, FR - Nyffin Esports.</p>
+						<p className=" pr-20">Desgin by @kooks</p>
+						<p>Developped by @kooks & @maarc</p>
+					</div>
+				</div>
+			</div>
+		</React.Fragment>
+	);
 };
 
 export default Footer;
