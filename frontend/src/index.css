@@ -33,7 +33,19 @@
 		src: url('~/assets/FontAlumniSans/AlumniSans-Regular.ttf')
 			format('truetype');
 	}
+	/* BEBAS NEUE */
+	@font-face {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: normal;
+		src: url('~/assets/FontBebasNeue/BebasNeue-Regular.ttf')
+			format('truetype');
+	}
 	body {
 		font-family: 'Archivo Narrow';
+	}
+	.text-outline {
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 1px;
 	}
 }

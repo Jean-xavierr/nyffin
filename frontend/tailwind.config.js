@@ -6,11 +6,13 @@ module.exports = {
 			colors: {
 				nyffinRed: '#910A0A',
 				nyffinBlack: '#191919',
+				nyffinGray: '#D1D1D1',
 			},
 			fontFamily: {
 				archivoNarrow: 'Archivo Narrow',
 				alumniSans: 'Alumni Sans',
 				anton: 'Anton',
+				bebasNeue: 'Bebas Neue',
 			},
 		},
 	},
