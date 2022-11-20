@@ -3,9 +3,10 @@ import socialMedia from '~/config/social-media';
 
 interface Props {
 	className?: string;
+	iconClassName?: string;
 }
 
-const SocialBar: FC<Props> = ({ className }) => {
+const SocialBar: FC<Props> = ({ className, iconClassName }) => {
 	return (
 		<div className={className + ' flex justify-between'}>
 			{socialMedia.map((media) => {
@@ -18,7 +19,7 @@ const SocialBar: FC<Props> = ({ className }) => {
 						key={media.name}
 						className="hover:transition-all hover:scale-125"
 					>
-						<Icon className="h-[22px] w-[22px]" />
+						<Icon className={iconClassName} />
 					</a>
 				);
 			})}

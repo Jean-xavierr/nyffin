@@ -18,11 +18,14 @@ const SectionTitle: FC<Props> = ({
 	secondColor,
 }) => {
 	return (
-		<div className={className + ' w-full relative'}>
-			<p className="select-none tracking-[.20em] uppercase font-bebasNeue text-nyffinGray text-outline text-[200px]">
+		<div className={className + ' w-full relative py-[60px]'}>
+			<p
+				aria-hidden="true"
+				className="select-none absolute z-0 leading-[80px] tracking-[.20em] uppercase font-bebasNeue text-nyffinGray text-outline text-[200px]"
+			>
 				{backtext}
 			</p>
-			<div className="text-center mt-[-180px]">
+			<div className="relative text-center z-40">
 				<h2 className={'uppercase font-anton text-[38px] ' + mainColor}>
 					{title}
 				</h2>
