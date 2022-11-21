@@ -33,7 +33,40 @@
 		src: url('~/assets/FontAlumniSans/AlumniSans-Regular.ttf')
 			format('truetype');
 	}
+	/* BEBAS NEUE */
+	@font-face {
+		font-family: 'Bebas Neue';
+		font-style: normal;
+		font-weight: normal;
+		src: url('~/assets/FontBebasNeue/BebasNeue-Regular.ttf')
+			format('truetype');
+	}
 	body {
 		font-family: 'Archivo Narrow';
+	}
+	.text-outline {
+		-webkit-text-fill-color: transparent;
+		-webkit-text-stroke: 1px;
+	}
+	.about-skewed-bg::after {
+		content: '';
+		width: 100%;
+		height: calc(100% + 70px);
+		position: absolute;
+		top: 0px;
+		right: 0;
+		background-color: #191919;
+		transform: skewY(-9deg);
+		z-index: -1;
+	}
+	.about-skewed-bg::before {
+		content: '';
+		width: 100%;
+		height: 400px;
+		position: absolute;
+		top: -100px;
+		left: 0;
+		background-color: #191919;
+		z-index: -1;
 	}
 }

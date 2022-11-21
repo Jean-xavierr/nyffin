@@ -10,7 +10,10 @@ const Footer = () => {
 					<div className="py-10">
 						<div className="grid grid-cols-2 items-center gap-y-3">
 							<NyffinLogo className="w-[100px] h-[40px]" />
-							<SocialBar className="w-[300px] justify-self-end" />
+							<SocialBar
+								className="w-[300px] justify-self-end"
+								iconClassName="h-[22px] w-[22px]"
+							/>
 							<p>nyffin.esport@gmail.com</p>
 							<div className="justify-self-end font-alumniSans text-2xl w-[300px] flex justify-between">
 								<a href="#About" className=" hover:underline">
@@ -27,7 +30,7 @@ const Footer = () => {
 							</div>
 						</div>
 					</div>
-					<div className="flex justify-between font-alumniSans border-t py-2">
+					<div className="flex justify-between font-alumniSans border-t py-2 tracking-[2px]">
 						<p className=" flex-grow">2022, FR - Nyffin Esports.</p>
 						<p className=" pr-20">Desgin by @kooks</p>
 						<p>Developped by @kooks & @maarc</p>
