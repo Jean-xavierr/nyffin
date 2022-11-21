@@ -17,12 +17,12 @@ const DecoReflection: FC<Props> = ({ className }) => {
 			<path
 				d="M-0.499994 31L-0.500177 1.99978L386.233 228.786L370.714 255.002L-0.499994 31Z"
 				fill="url(#paint0_linear_328_224)"
-				fill-opacity="0.14"
+				fillOpacity="0.14"
 			/>
 			<path
 				d="M2.00029 174L2.00023 70.5005L514.318 369.787L469.715 445.138L2.00029 174Z"
 				fill="url(#paint1_linear_328_224)"
-				fill-opacity="0.14"
+				fillOpacity="0.14"
 			/>
 			<defs>
 				<linearGradient
@@ -33,8 +33,8 @@ const DecoReflection: FC<Props> = ({ className }) => {
 					y2="241.89"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="white" />
-					<stop offset="1" stop-color="#D9D9D9" stop-opacity="0" />
+					<stop stopColor="white" />
+					<stop offset="1" stopColor="#D9D9D9" stopOpacity="0" />
 				</linearGradient>
 				<linearGradient
 					id="paint1_linear_328_224"
@@ -44,8 +44,8 @@ const DecoReflection: FC<Props> = ({ className }) => {
 					y2="407.462"
 					gradientUnits="userSpaceOnUse"
 				>
-					<stop stop-color="white" />
-					<stop offset="1" stop-color="#D9D9D9" stop-opacity="0" />
+					<stop stopColor="white" />
+					<stop offset="1" stopColor="#D9D9D9" stopOpacity="0" />
 				</linearGradient>
 			</defs>
 		</svg>

@@ -69,4 +69,15 @@
 		background-color: #191919;
 		z-index: -1;
 	}
+	.blaston_position {
+		object-position: -480px 0px;
+		/* filter: brightness(0.6); */
+	}
+	.hado_position {
+		object-position: -64px 0px;
+		filter: brightness(0.9);
+	}
+	.eva_position {
+		filter: brightness(2);
+	}
 }

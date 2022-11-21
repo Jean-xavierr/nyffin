@@ -13,7 +13,7 @@ const About = () => {
 		{ num: '5', text: 'PLAYERS' },
 	];
 	return (
-		<div className="w-[100%] text-white about-skewed-bg relative mb-[400px] z-10">
+		<div className="w-[100%] text-white about-skewed-bg relative mb-[200px] z-10">
 			<DecoReflection className="absolute bottom-[50px] left-0" />
 			<SectionTitle
 				title="About Nyffin"
@@ -22,7 +22,7 @@ const About = () => {
 				mainColor="text-white"
 				secondColor="text-nyffinRed"
 				backtextColor="text-[#424242]"
-				placememt=" right-[50%]"
+				placement=" right-[50%]"
 			/>
 			<div className="max-w-[850px] m-auto px-[30px]">
 				<div className="select-none max-w-[800px] m-auto flex justify-around py-[80px]">

@@ -8,7 +8,7 @@ interface Props {
 	mainColor: string;
 	secondColor: string;
 	backtextColor: string;
-	placememt: string;
+	placement: string;
 }
 
 const SectionTitle: FC<Props> = ({
@@ -19,7 +19,7 @@ const SectionTitle: FC<Props> = ({
 	mainColor,
 	secondColor,
 	backtextColor,
-	placememt,
+	placement,
 }) => {
 	return (
 		<div className={className + ' w-full relative py-[60px]'}>
@@ -27,7 +27,7 @@ const SectionTitle: FC<Props> = ({
 				aria-hidden="true"
 				className={
 					'select-none absolute z-0 leading-[80px] tracking-[.20em] uppercase font-bebasNeue text-outline text-[200px] ' +
-					placememt +
+					placement +
 					' ' +
 					backtextColor
 				}
