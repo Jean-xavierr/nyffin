@@ -13,7 +13,7 @@ const About = () => {
 		{ num: '5', text: 'PLAYERS' },
 	];
 	return (
-		<div className="w-[100%] text-white about-skewed-bg relative mb-[200px] z-10">
+		<div className="w-[100%] text-white about-skewed-bg relative mb-[200px]">
 			<DecoReflection className="absolute bottom-[50px] left-0" />
 			<SectionTitle
 				title="About Nyffin"

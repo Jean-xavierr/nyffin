@@ -3,11 +3,12 @@ import Footer from '~/src/components/Footer';
 import About from './About';
 import Teams from '../components/Teams';
 import Achievements from '../components/Achievements';
+import Landing from '../components/Landing';
 
 const Home = () => {
 	return (
 		<React.Fragment>
-			<div>Home</div>
+			<Landing />
 			<About />
 			<Teams />
 			<Achievements />
