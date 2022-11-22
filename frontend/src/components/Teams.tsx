@@ -55,10 +55,10 @@ const Teams = () => {
 
 			<div className="relative flex gap-[20px] m-[50px]">
 				<DecoDots className="absolute top-[-130px] left-[-80px]" />
-				{teams.map((team) => {
+				{teams.map((team, id) => {
 					return (
 						<div
-							key={team.game}
+							key={id}
 							className="relative w-[300px] h-[500px] grayscale hover:grayscale-0 grid grid-cols-1 items-center justify-items-center"
 						>
 							<img
