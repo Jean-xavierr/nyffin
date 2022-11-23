@@ -9,7 +9,8 @@ BUILD_DIR="dist"
 if [ ! -d ${BUILD_DIR} ]; then
 	echo "BUILD_DIR: ${BUILD_DIR} does not exist"
 	make build
-	exit $?
+	printf "\n>>> If it successfully built, please rerun deployment script!\n"
+	exit 0
 fi
 
 git checkout -b ${TMP_BRANCH} && \
