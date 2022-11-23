@@ -15,7 +15,7 @@ build:
 	$(DOCKER) exec -it $(NAME) yarn build
 
 deploy:
-	./deploy.sh
+	@./deploy.sh
 
 re: fclean all
 

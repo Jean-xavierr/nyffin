@@ -4,7 +4,24 @@ This webapp is deployed on www.nyffin.com
 
 Boilerplate from: [Vite + React + Tailwind CSS + Typescript starter](https://github.com/wobsoriano/vite-react-tailwind-starter)
 
-## Available Scripts
+## Available Scripts in `Makefile`
+
+This app uses `Docker` and `docker-compose`, thus we use a Makefile:
+
+- `all` (up & logs)
+- `up` (start dev server)
+- `exec` (exec shell in docker container)
+- `build` (build for production)
+- `deploy` (push prod build)
+- `re` (fclean & all)
+- `reload` (down & all)
+- `logs` (follow docker container logs)
+- `stop` (stop container)
+- `down` (down container)
+- `ps` (print container status)
+- `fclean` (remove images, dist, node_modules)
+
+## Available Scripts in `package.json`
 
 In the project directory, you can run:
 

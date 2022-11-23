@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 LAST_COMMIT="$(git rev-parse --short HEAD)"
 SRC_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
@@ -11,6 +11,10 @@ if [ ! -d ${BUILD_DIR} ]; then
 	make build
 	printf "\n>>> If it successfully built, please rerun deployment script!\n"
 	exit 0
+else
+	echo -n 'Do you want to re-build ? (y/n): ' && read -n 1 choice
+	echo ''
+	[ "${choice}" = 'y' ] && make build || echo 'No rebuilding'
 fi
 
 git checkout -b ${TMP_BRANCH} && \
