@@ -11,6 +11,12 @@ up:
 exec:
 	$(DOCKER) exec -it $(NAME) sh
 
+build:
+	$(DOCKER) exec -it $(NAME) yarn build
+
+deploy:
+	./deploy.sh
+
 re: fclean all
 
 reload: down all
