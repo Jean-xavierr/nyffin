@@ -1,5 +1,5 @@
 NAME := front_nyffin
-FRONT_DIR := frontend
+FRONT_DIR := ./
 DOCKER := docker
 DC := docker-compose
 
@@ -10,6 +10,12 @@ up:
 
 exec:
 	$(DOCKER) exec -it $(NAME) sh
+
+build:
+	$(DOCKER) exec -it $(NAME) yarn build
+
+deploy:
+	@./deploy.sh
 
 re: fclean all
 
@@ -29,5 +35,5 @@ ps:
 
 fclean:
 	$(DC) down --rmi all --volumes
-	rm -rf ./${FRONT_DIR}/dist
-	rm -rf ./${FRONT_DIR}/node_modules
+	rm -rf ${FRONT_DIR}/dist
+	rm -rf ${FRONT_DIR}/node_modules
