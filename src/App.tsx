@@ -3,12 +3,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from '~/src/views/Home';
 import NotFound from '~/src/views/NotFound';
+import Nav from './components/Nav';
 
 const App = () => {
 	return (
-		<Home />
+		<div>
+			<Nav />
+			<Home />
+		</div>
 		// <Router>
-		//   <Nav />
+		//
 		//   <Switch>
 		//     <Route exact path="/">
 		//       <Home />
