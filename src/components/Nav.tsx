@@ -19,14 +19,14 @@ const Nav = () => {
 					Achievements
 				</a>
 			</div>
-			<div className="flex">
+			{/* <div className="flex">
 				<a href="" className="hover:underline">
 					FR
 				</a>
 				<a href="" className="ml-[20px] hover:underline">
 					EN
 				</a>
-			</div>
+			</div> */}
 		</div>
 	);
 };
