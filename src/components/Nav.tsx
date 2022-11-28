@@ -3,19 +3,19 @@ import NyffinLogo from './Svg/NyffinLogo';
 
 const Nav = () => {
 	return (
-		<div className="w-full px-[50px] py-[0px] fixed z-50 bg-nyffinBlack flex justify-between items-center  text-white font-alumniSans text-[22px] font-medium tracking-[2px]">
+		<div className="w-full px-[50px] py-[10px] fixed z-50  flex justify-between items-center  text-white font-alumniSans text-[25px] font-medium tracking-[2px] uppercase">
 			<NyffinLogo
-				className="w-[80px] h-[45px]"
-				style={{ flexBasis: '40%' }}
+				className="w-[120px] h-[60px]"
+				style={{ flexBasis: '50%' }}
 			/>
-			<div className="flex justify-between w-[350px] mx-[20px]">
-				<a href="" className="hover:underline">
+			<div className="flex justify-between w-[400px] mx-[20px]">
+				<a href="#about" className="hover:underline">
 					About
 				</a>
-				<a href="" className="hover:underline">
+				<a href="#teams" className="hover:underline">
 					Teams
 				</a>
-				<a href="" className="hover:underline">
+				<a href="#achievements" className="hover:underline">
 					Achievements
 				</a>
 			</div>

@@ -51,6 +51,7 @@ const Teams = () => {
 				subtitle="Discover our top players"
 				backtextColor="text-nyffinGray"
 				placement=" left-[50%]"
+				id="teams"
 			/>
 
 			<div className="relative flex justify-between m-[50px]">
