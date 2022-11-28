@@ -7,7 +7,7 @@ import Nav from './components/Nav';
 
 const App = () => {
 	return (
-		<div className=" overflow-x-hidden">
+		<div className="overflow-x-hidden">
 			<Nav />
 			<Home />
 		</div>

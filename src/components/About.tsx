@@ -1,10 +1,10 @@
 import React from 'react';
-import SectionTitle from '../components/SectionTitle';
-import SocialBar from '../components/SocialBar';
-import SvgDiscord from '../components/Svg/Discord';
+import SectionTitle from './SectionTitle';
+import SocialBar from './SocialBar';
+import SvgDiscord from './Svg/Discord';
 import NyffinDiscordImg from '~/assets/img/nyffin_mascot_watermark.jpg';
-import ExternalLinkIcon from '../components/Svg/ExternalLinkIcon';
-import DecoReflection from '../components/Svg/DecoReflection';
+import ExternalLinkIcon from './Svg/ExternalLinkIcon';
+import DecoReflection from './Svg/DecoReflection';
 
 const About = () => {
 	const stats = [
@@ -13,7 +13,7 @@ const About = () => {
 		{ num: '5', text: 'PLAYERS' },
 	];
 	return (
-		<div className="w-[100%] text-white about-skewed-bg relative mb-[200px] mt-[-200px] pt-[300px]">
+		<div className="w-[100%] text-white bg-nyffinBlack sm:bg-transparent sm:about-skewed-bg relative mb-[200px] mt-[-200px] pt-[300px]">
 			<DecoReflection className="absolute bottom-[50px] left-0" />
 			<SectionTitle
 				title="About Nyffin"
@@ -43,14 +43,7 @@ const About = () => {
 				</div>
 
 				<div className="relative grid grid-cols-1 my-[50px] gap-[20px]">
-					<div className="absolute right-0 m-5">
-						<div className=" absolute  top-[-15px] left-[-18px] w-[250px] h-[250px] bg-gray-500"></div>
-						<span
-							className="block bg-nyffinRed w-[250px] h-[250px]"
-							aria-hidden="true"
-						></span>
-					</div>
-					<p className="relative z-10 max-w-[550px] text-justify py-[40px] text-[18px]">
+					<p className="relative z-20 max-w-[550px] text-justify py-[40px] text-[18px]">
 						Fondée officiellement en 2022, Nyffin est une{' '}
 						<b>
 							organisation d'esport orienté réalité virtuelle (VR) et
@@ -67,13 +60,23 @@ const About = () => {
 						de France.
 					</p>
 
-					<div className="max-w-[350px] grid grid-cols-1 gap-0 ml-[80px] pt-[40px]">
+					{/* Image */}
+					<div className="relative mx-auto md:absolute md:right-0 md:m-5 mb-[-70px]">
+						<div className="relative w-[250px] h-[250px] bg-gray-500 z-10"></div>
+						<span
+							className="absolute top-[15px] left-[18px] block bg-nyffinRed w-[250px] h-[250px] z-0"
+							aria-hidden="true"
+						></span>
+					</div>
+
+					<div className="max-w-[350px] grid grid-cols-1 gap-0 sm:ml-[80px] pt-[40px] z-10">
 						<p className="font-anton text-4xl">LE SPORT VIRTUEL</p>
-						<p className="justify-self-end font-bebasNeue text-[80px] text-outline tracking-[.10em] leading-[70px] ">
+						<p className="justify-self-end font-bebasNeue text-[60px] sm:text-[80px] text-outline tracking-[.10em] leading-[70px] ">
 							DU FUTUR
 						</p>
 					</div>
-					<p className="max-w-[550px] text-justify justify-self-end py-[20px] text-[18px]">
+
+					<p className="max-w-[550px] text-justify justify-self-end py-[50px] sm:py-[20px] text-[18px]">
 						L'Esport VR/AR modifie la façon dont les joueurs interagissent
 						: la <b>compétition au plus haut niveau</b> devient une
 						véritable
@@ -90,7 +93,7 @@ const About = () => {
 						de la même manière que les athlètes traditionnels le font.
 					</p>
 				</div>
-				<p className="uppercase font-alumniSans text-[25px] tracking-[2px] text-center pt-[130px]">
+				<p className="uppercase font-alumniSans text-[25px] tracking-[2px] text-center sm:pt-[130px]">
 					Suivez l'actualité de Nyffin sur les réseaux
 				</p>
 				<SocialBar
@@ -98,23 +101,27 @@ const About = () => {
 					iconClassName="h-[30px] w-[30px]"
 				/>
 			</div>
+
 			{/* DISCORD BUTTON */}
+			<p className="block sm:hidden uppercase text-[12px] tracking-[2px] text-center mx-auto mt-[100px] mb-[-10px]">
+				Actus VR, évènements gaming ...
+			</p>
 			<a
 				href="https://discord.gg/JFV3K9GCjB"
 				target="_blank"
-				className="absolute right-[70%] bottom-[-200px] max-w-[370px] rounded-[4px] p-[10px] bg-nyffinRed text-white flex items-center hover:transition-all hover:scale-105"
+				className="m-[20px] sm:absolute sm:right-[70%] sm:bottom-[-200px] max-w-[370px] rounded-[4px] p-[10px] bg-nyffinRed text-white flex items-center justify-around hover:transition-all hover:scale-105"
 			>
 				<img
 					src={NyffinDiscordImg}
 					alt="Nyffin logo"
 					className="object-cover w-[90px] h-[90px] rounded-[4px]"
 				/>
-				<div>
-					<ExternalLinkIcon className="w-[18px] h-[18px] absolute right-[5px] top-[5px]" />
-					<p className="uppercase text-[12px] tracking-[2px] text-center my-[8px]">
+				<div className="relative">
+					<ExternalLinkIcon className="w-[18px] h-[18px] absolute right-[-4px] top-[-6px]" />
+					<p className="sm:block hidden uppercase text-[12px] tracking-[2px] text-center my-[8px]">
 						Actus VR, évènements gaming ...
 					</p>
-					<p className="uppercase font-anton text-[19px] tracking-[2px] text-center leading-[15px]">
+					<p className="w-[150px] sm:w-auto uppercase font-anton text-[23px] sm:text-[19px] tracking-[2px] sm:text-center leading-[28px] sm:leading-[15px] sm:ml-0">
 						Rejoins la communauté nyffin sur{' '}
 						<SvgDiscord className="inline w-[28px] h-[33px] pt-[2px]" />
 					</p>
