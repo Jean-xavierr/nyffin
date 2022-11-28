@@ -16,15 +16,15 @@ const Footer = () => {
 							/>
 							<p>nyffin.esport@gmail.com</p>
 							<div className="justify-self-end font-alumniSans text-2xl w-[300px] flex justify-between">
-								<a href="#About" className=" hover:underline">
+								<a href="#about" className=" hover:underline">
 									About
 								</a>
 								<span className="w-[1px] h-[22px] bg-white mt-1"></span>
-								<a href="#Teams" className=" hover:underline">
+								<a href="#teams" className=" hover:underline">
 									Teams
 								</a>
 								<span className="w-[1px] h-[22px] bg-white mt-1"></span>
-								<a href="#Achievements" className=" hover:underline">
+								<a href="#achievements" className=" hover:underline">
 									Achievements
 								</a>
 							</div>

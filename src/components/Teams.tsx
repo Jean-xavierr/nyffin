@@ -51,9 +51,10 @@ const Teams = () => {
 				subtitle="Discover our top players"
 				backtextColor="text-nyffinGray"
 				placement=" left-[50%]"
+				id="teams"
 			/>
 
-			<div className="relative flex gap-[20px] m-[50px]">
+			<div className="relative flex justify-between m-[50px]">
 				<DecoDots className="absolute top-[-130px] left-[-80px]" />
 				{teams.map((team, id) => {
 					return (

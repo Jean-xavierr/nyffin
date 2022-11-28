@@ -3,6 +3,9 @@
 @import 'tailwindcss/utilities';
 
 @layer base {
+	html {
+		scroll-behavior: smooth;
+	}
 	/* ARCHIVO NARROW */
 	@font-face {
 		font-family: 'Archivo Narrow';
@@ -33,6 +36,13 @@
 		src: url('~/assets/FontAlumniSans/AlumniSans-Regular.ttf')
 			format('truetype');
 	}
+	@font-face {
+		font-family: 'Alumni Sans';
+		font-style: normal;
+		font-weight: 500;
+		src: url('~/assets/FontAlumniSans/AlumniSans-Medium.ttf')
+			format('truetype');
+	}
 	/* BEBAS NEUE */
 	@font-face {
 		font-family: 'Bebas Neue';
@@ -47,6 +57,27 @@
 	.text-outline {
 		-webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 1px;
+	}
+	.landing-skewed-bg::after {
+		content: '';
+		width: 100%;
+		height: calc(100% - 70px);
+		position: absolute;
+		top: 0px;
+		right: 0;
+		background-color: #910a0a;
+		transform: skewY(9deg);
+		z-index: -1;
+	}
+	.landing-skewed-bg::before {
+		content: '';
+		width: 100%;
+		height: 400px;
+		position: absolute;
+		top: -100px;
+		left: 0;
+		background-color: #910a0a;
+		z-index: -1;
 	}
 	.about-skewed-bg::after {
 		content: '';
