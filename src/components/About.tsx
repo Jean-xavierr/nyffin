@@ -13,7 +13,7 @@ const About = () => {
 		{ num: '5', text: 'PLAYERS' },
 	];
 	return (
-		<div className="w-[100%] text-white bg-nyffinBlack sm:bg-transparent sm:about-skewed-bg relative mb-[200px] mt-[-200px] pt-[300px]">
+		<div className="w-[100%] text-white bg-nyffinBlack sm:bg-transparent sm:about-skewed-bg relative mb-[200px] mt-[-200px] pt-[300px] pb-[150px] sm:pb-0">
 			<DecoReflection className="absolute bottom-[50px] left-0" />
 			<SectionTitle
 				title="About Nyffin"
@@ -46,7 +46,7 @@ const About = () => {
 					<p className="relative z-20 max-w-[550px] text-justify py-[40px] text-[18px]">
 						Fondée officiellement en 2022, Nyffin est une{' '}
 						<b>
-							organisation d'esport orienté réalité virtuelle (VR) et
+							organisation d'esport orientée réalité virtuelle (VR) et
 							réalité augmentée (AR) en France
 						</b>
 						. Vice-Champions de France de Hado 2022, et multiples fois
@@ -103,30 +103,33 @@ const About = () => {
 			</div>
 
 			{/* DISCORD BUTTON */}
-			<p className="block sm:hidden uppercase text-[12px] tracking-[2px] text-center mx-auto mt-[100px] mb-[-10px]">
-				Actus VR, évènements gaming ...
-			</p>
-			<a
-				href="https://discord.gg/JFV3K9GCjB"
-				target="_blank"
-				className="m-[20px] sm:absolute sm:right-[70%] sm:bottom-[-200px] max-w-[370px] rounded-[4px] p-[10px] bg-nyffinRed text-white flex items-center justify-around hover:transition-all hover:scale-105"
-			>
-				<img
-					src={NyffinDiscordImg}
-					alt="Nyffin logo"
-					className="object-cover w-[90px] h-[90px] rounded-[4px]"
-				/>
-				<div className="relative">
-					<ExternalLinkIcon className="w-[18px] h-[18px] absolute right-[-4px] top-[-6px]" />
-					<p className="sm:block hidden uppercase text-[12px] tracking-[2px] text-center my-[8px]">
-						Actus VR, évènements gaming ...
-					</p>
-					<p className="w-[150px] sm:w-auto uppercase font-anton text-[23px] sm:text-[19px] tracking-[2px] sm:text-center leading-[28px] sm:leading-[15px] sm:ml-0">
-						Rejoins la communauté nyffin sur{' '}
-						<SvgDiscord className="inline w-[28px] h-[33px] pt-[2px]" />
-					</p>
-				</div>
-			</a>
+			<div className="absolute bottom-[-70px] left-[50%] translate-x-[-50%] sm:relative sm:bottom-0">
+				<p className="block sm:hidden uppercase text-[12px] tracking-[2px] text-center mx-auto mt-[100px] mb-[-10px]">
+					Actus VR, évènements gaming ...
+				</p>
+				<a
+					href="https://discord.gg/JFV3K9GCjB"
+					target="_blank"
+					className="w-[280px] my-[20px] mx-auto relative sm:absolute sm:left-[10%] sm:bottom-[-200px] sm:w-[370px] rounded-[4px] p-[10px] bg-nyffinRed text-white flex items-center justify-between flex-wrap sm:flex-nowrap hover:transition-all hover:scale-105"
+				>
+					<ExternalLinkIcon className="w-[18px] h-[18px] absolute right-[4px] top-[6px]" />
+					{/* <img
+						src={NyffinDiscordImg}
+						alt="Nyffin logo"
+						className="object-cover w-[90px] h-[90px] rounded-[4px]"
+					/> */}
+					<div className="bg-nyffinGray w-[90px] h-[90px] rounded-[4px] flex-shrink-0"></div>
+					<div className="sm:text-center">
+						<p className="sm:block hidden uppercase text-[12px] tracking-[2px] my-[8px]">
+							Actus VR, évènements gaming ...
+						</p>
+						<p className="w-[150px] sm:w-auto uppercase font-anton text-[18px] sm:text-[19px] tracking-[2px] leading-[28px] sm:leading-[15px]">
+							Rejoins la communauté nyffin sur{' '}
+							<SvgDiscord className="inline w-[28px] h-[33px] pt-[2px]" />
+						</p>
+					</div>
+				</a>
+			</div>
 		</div>
 	);
 };
