@@ -28,7 +28,7 @@ const SectionTitle: FC<Props> = ({
 			<p
 				aria-hidden="true"
 				className={
-					'select-none absolute z-0 leading-[80px] tracking-[.20em] uppercase font-bebasNeue text-outline text-[200px] ' +
+					'select-none absolute z-0 leading-[80px] tracking-[.10em] sm:tracking-[.20em] uppercase font-bebasNeue text-outline lg:text-[200px] md:text-[150px] text-[95px] top-[20px] md:top-auto ' +
 					placement +
 					' ' +
 					backtextColor

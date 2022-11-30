@@ -50,7 +50,7 @@ const Teams = () => {
 				title="OUR TEAMS"
 				subtitle="Discover our top players"
 				backtextColor="text-nyffinGray"
-				placement=" left-[50%]"
+				placement="sm:left-[50%] left-[100%] translate-x-[-100%] sm:translate-x-0"
 				id="teams"
 			/>
 

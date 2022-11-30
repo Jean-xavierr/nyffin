@@ -49,7 +49,7 @@ const Achievements = () => {
 				mainColor="text-white"
 				secondColor="text-nyffinBlack"
 				backtextColor="text-black/[.35]"
-				placement="top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+				placement="top-[50%] left-[50%] translate-x-[-50%]"
 				className="before:block before:absolute before:-inset-0 before:skew-y-[8deg] before:bg-nyffinRed "
 				id="achievements"
 			/>

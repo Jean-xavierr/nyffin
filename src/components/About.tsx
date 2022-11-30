@@ -22,7 +22,7 @@ const About = () => {
 				mainColor="text-white"
 				secondColor="text-nyffinRed"
 				backtextColor="text-[#424242]"
-				placement=" right-[50%]"
+				placement="min-[490px]:right-[50%]"
 				id="about"
 			/>
 			<div className="max-w-[850px] m-auto px-[30px]">
