@@ -54,17 +54,17 @@ const Achievements = () => {
 				id="achievements"
 			/>
 
-			<p className="mx-[50px] my-[100px] text-center text-[18px]">
+			<p className="max-w-[810px] px-[30px] mx-auto my-[100px] sm:text-center text-justify text-[18px]">
 				Depuis 2021, tant dans la réalité virtuelle que dans la réalité
-				augmentée, nos équipes ont remporté plusieurs prix
-				<br /> avec l'ambition d'en gagner d'autres.
+				augmentée, nos équipes ont remporté plusieurs prix avec l'ambition
+				d'en gagner d'autres.
 			</p>
-			<div className="max-w-[800px] m-auto border-y divide-y">
+			<div className="max-w-[800px] min-[840px]:mx-auto border-y divide-y mx-[20px]">
 				{AchievementsData.map((achievement, id) => {
 					return (
 						<div
 							key={id}
-							className="flex flex-row py-[5px] items-center gap-[40px]"
+							className="flex flex-row flex-wrap min-[460px]:flex-nowrap py-[5px] items-center gap-x-[40px]"
 						>
 							<div className="flex items-center gap-3 min-w-[100px]">
 								{achievement.rank < 4 && achievement.rank != 0 ? (
@@ -101,10 +101,13 @@ const Achievements = () => {
 								</p>
 							</div>
 							{date_format(achievement.date)}
-							<div className="text-[20px]" style={{ flexBasis: '70%' }}>
+							<div
+								className="text-[20px] order-4 min-[460px]:order-3"
+								style={{ flexBasis: '70%' }}
+							>
 								{achievement.event_name}
 							</div>
-							<div className="w-[35px]">
+							<div className="w-[35px] order-3 min-[460px]:order-4">
 								{achievement.url != '' && (
 									<a href={achievement.url} target="_blank">
 										<PlayButton className="text-nyffinRed w-[30px] h-[30px]" />

@@ -37,7 +37,11 @@ const SectionTitle: FC<Props> = ({
 				{backtext}
 			</p>
 			<div className="relative text-center z-40">
-				<h2 className={'uppercase font-anton text-[46px] ' + mainColor}>
+				<h2
+					className={
+						'uppercase font-anton text-[35px] sm:text-[46px] ' + mainColor
+					}
+				>
 					{title}
 				</h2>
 				<p
