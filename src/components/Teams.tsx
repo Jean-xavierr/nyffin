@@ -54,22 +54,25 @@ const Teams = () => {
 				id="teams"
 			/>
 
-			<div className="relative flex justify-between m-[50px]">
-				<DecoDots className="absolute top-[-130px] left-[-80px]" />
+			<div className="relative flex flex-col gap-y-4 sm:flex-row justify-between sm:m-[50px] mt-[50px]">
+				<DecoDots className="absolute top-[-70px] sm:top-[-130px] left-20px] sm:left-[-80px] w-[120px] h-[120px] sm:w-[200px] sm:h-[200px]" />
 				{teams.map((team, id) => {
 					return (
 						<div
 							key={id}
-							className="relative w-[300px] h-[500px] grayscale hover:grayscale-0 grid grid-cols-1 items-center justify-items-center"
+							className=" border-y relative w-full h-[200px] sm:w-[300px] sm:h-[500px] sm:grayscale hover:grayscale-0 grid grid-cols-1 items-center justify-items-center skew-y-[-8deg] sm:skew-y-0 overflow-hidden"
 						>
 							<img
 								className={
-									'absolute top-0 w-[300px] h-[500px] object-cover ' +
+									'absolute top-[20px]sm:top-0  w-full h-[120%] sm:w-[300px] sm:h-[500px] object-cover skew-y-[8deg] sm:skew-y-0 ' +
 									team.img_position
 								}
 								src={team.img}
 							/>
-							<img src={team.logo} className="relative" />
+							<img
+								src={team.logo}
+								className="relative skew-y-[8deg] sm:skew-y-0"
+							/>
 						</div>
 					);
 				})}
