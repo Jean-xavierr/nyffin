@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc --skipLibCheck && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview --host"
   },
   "dependencies": {
     "react": "^18.2.0",
