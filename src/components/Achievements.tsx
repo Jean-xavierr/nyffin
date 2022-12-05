@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionTitle from './SectionTitle';
 import Medal from './Svg/Medal';
 import PlayButton from './Svg/PlayButton';
 import Trophy from './Svg/Trophy';
-import AchievementsData from '~/config/achievements-data';
+import axios from 'axios';
 
 const Achievements = () => {
+	const [AchievementsData, setAchievementsData] = useState<IAchievement[]>([]);
 	const rank_suffix = ['st', 'nd', 'rd', 'th'];
 	const rank_color = [
 		'text-[#FFDC82]',
@@ -13,6 +14,13 @@ const Achievements = () => {
 		'text-[#C07300]',
 		'text-[#D8D8D8]',
 	];
+
+	useEffect(() => {
+		axios
+			.get<IAchievement[]>('/config/achievements-data.json')
+			.then((res) => setAchievementsData(res.data))
+			.catch(console.error);
+	});
 
 	const get_rank_color = (rank: number) => {
 		if (rank < 4 && rank != 0) return rank_color[rank - 1];

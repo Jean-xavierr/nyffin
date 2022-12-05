@@ -1,9 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import axios from 'axios';
 
 import Home from '~/src/views/Home';
 import NotFound from '~/src/views/NotFound';
 import Nav from './components/Nav';
+
+axios.defaults.baseURL = window.location.origin;
 
 const App = () => {
 	return (
