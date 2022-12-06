@@ -41,7 +41,11 @@ const OpenEmailIcon = () => {
 };
 
 const Email: FC<Props> = ({ className }) => {
+	const emailAddress = 'nyffin.esport@gmail.com';
 	const [isHovering, setIsHovering] = useState(false);
+	const [showCopyToast, setShowCopyToast] = useState(false);
+	const [timer, setTimer] = useState<number>(0);
+
 	const handleMouseOver = () => {
 		setIsHovering(true);
 	};
@@ -49,14 +53,41 @@ const Email: FC<Props> = ({ className }) => {
 	const handleMouseOut = () => {
 		setIsHovering(false);
 	};
+
+	const copyEmailToClipboard = () => {
+		try {
+			navigator.clipboard.writeText(emailAddress);
+			setShowCopyToast(true);
+
+			clearTimeout(timer);
+			setTimer(
+				setTimeout(() => {
+					setShowCopyToast(false);
+				}, 2000)
+			);
+		} catch (e) {
+			console.error(e);
+		}
+	};
+
 	return (
 		<div
-			className={className + ' flex items-center hover:cursor-pointer'}
+			className={className + ' relative flex items-center cursor-pointer'}
+			onClick={copyEmailToClipboard}
 			onMouseOver={handleMouseOver}
 			onMouseOut={handleMouseOut}
 		>
+			<span
+				className={
+					(showCopyToast ? 'flex' : 'hidden') +
+					' animate-bounce justify-center items-center absolute right-1 bottom-10 py-2 px-4 bg-nyffinRed border-2 rounded-md text-lg'
+				}
+				aria-hidden="true"
+			>
+				Copied!
+			</span>
 			{isHovering ? <OpenEmailIcon /> : <EmailIcon />}
-			<p className="text-[22px] ml-2">nyffin.esport@gmail.com</p>
+			<p className="text-[22px] ml-2">{emailAddress}</p>
 		</div>
 	);
 };
