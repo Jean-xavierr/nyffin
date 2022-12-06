@@ -64,7 +64,7 @@ const Achievements = () => {
 					return (
 						<div
 							key={id}
-							className="flex flex-row flex-wrap min-[460px]:flex-nowrap py-[5px] items-center gap-x-[40px]"
+							className="flex flex-row flex-wrap min-[460px]:flex-nowrap py-[5px] items-center gap-x-[40px] justify-between"
 						>
 							<div className="flex items-center gap-3 min-w-[100px]">
 								{achievement.rank < 4 && achievement.rank != 0 ? (

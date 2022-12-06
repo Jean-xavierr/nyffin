@@ -8,13 +8,13 @@ const Teams = () => {
 			game: 'Hado',
 			img: '/assets/img/hado_img.jpg',
 			logo: '/assets/img/hado_logo.png',
-			img_style: 'sm:hado',
+			img_style: 'sm:hado brightness-[0.9] sm:brightness-100',
 		},
 		{
 			game: 'Ultimechs',
 			img: '/assets/img/ultimechs_img.png',
 			logo: '/assets/img/ultimechs_logo.png',
-			img_style: 'ultimechs',
+			img_style: 'ultimechs brightness-[0.9] sm:brightness-100',
 		},
 		{
 			game: 'Echo Arena',
