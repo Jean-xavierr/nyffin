@@ -41,7 +41,7 @@ const Achievements = () => {
 	};
 
 	return (
-		<div className="mt-[150px] mb-[250px]">
+		<div className="mt-[150px] mb-[150px] sm:mb-[250px]">
 			<SectionTitle
 				title="All our achievements"
 				subtitle="???????????????????"
@@ -54,7 +54,7 @@ const Achievements = () => {
 				id="achievements"
 			/>
 
-			<p className="max-w-[810px] px-[30px] mx-auto my-[100px] sm:text-center text-justify text-[18px]">
+			<p className="max-w-[810px] px-[30px] mx-auto my-[70px] sm:my-[120px] sm:text-center text-justify text-[18px]">
 				Depuis 2021, tant dans la réalité virtuelle que dans la réalité
 				augmentée, nos équipes ont remporté plusieurs prix avec l'ambition
 				d'en gagner d'autres.

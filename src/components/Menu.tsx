@@ -31,7 +31,7 @@ const Menu: FC<Props> = ({ className, toggleDisplay }) => {
 					);
 				})}
 			</div>
-			<div className="flex">
+			{/* <div className="flex">
 				<a
 					href=""
 					className="relative after:w-[30px] after:h-[2px] after:absolute after:bg-nyffinRed after:bottom-[2px] after:left-[-3px]"
@@ -42,7 +42,7 @@ const Menu: FC<Props> = ({ className, toggleDisplay }) => {
 				<a href="" className="">
 					EN
 				</a>
-			</div>
+			</div> */}
 			<Email className="" />
 			<SocialBar className="w-[300px] bottom-0" />
 		</div>

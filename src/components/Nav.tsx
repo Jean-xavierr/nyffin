@@ -9,10 +9,12 @@ const Nav = () => {
 
 	const toggleDisplayMenu = () => {
 		setDisplayMenu(!displayMenu);
+		if (displayMenu) document.body.style.overflow = 'unset';
+		else document.body.style.overflow = 'hidden';
 	};
 
 	return (
-		<div className="w-full px-[50px] py-[10px] fixed z-50 flex justify-center sm:justify-between items-center text-white font-alumniSans text-[25px] font-medium tracking-[2px] uppercase">
+		<div className="bg-nyffinRed w-full px-[50px] py-[10px] fixed z-50 flex justify-center sm:justify-between items-center text-white font-alumniSans text-[25px] font-medium tracking-[2px] uppercase">
 			<Burger
 				display={displayMenu}
 				className={
