@@ -5,6 +5,7 @@ import SvgDiscord from './Svg/Discord';
 import NyffinDiscordImg from '~/assets/img/nyffin_mascot_watermark.jpg';
 import ExternalLinkIcon from './Svg/ExternalLinkIcon';
 import DecoReflection from './Svg/DecoReflection';
+import NyffinMascot from './Svg/NyffinMascot';
 
 const About = () => {
 	const stats = [
@@ -113,12 +114,9 @@ const About = () => {
 					className="w-[280px] my-[20px] mx-auto relative sm:absolute sm:left-[10%] sm:bottom-[-200px] sm:w-[370px] rounded-[4px] p-[10px] bg-nyffinRed text-white flex items-center justify-between flex-wrap sm:flex-nowrap hover:transition-all hover:scale-105"
 				>
 					<ExternalLinkIcon className="w-[18px] h-[18px] absolute right-[4px] top-[6px]" />
-					{/* <img
-						src={NyffinDiscordImg}
-						alt="Nyffin logo"
-						className="object-cover w-[90px] h-[90px] rounded-[4px]"
-					/> */}
-					<div className="bg-nyffinGray w-[90px] h-[90px] rounded-[4px] flex-shrink-0"></div>
+					<div className="bg-white w-[90px] h-[90px] rounded-[4px] flex-shrink-0">
+						<NyffinMascot className="w-full h-full" />
+					</div>
 					<div className="sm:text-center">
 						<p className="sm:block hidden uppercase text-[12px] tracking-[2px] my-[8px]">
 							Actus VR, évènements gaming ...

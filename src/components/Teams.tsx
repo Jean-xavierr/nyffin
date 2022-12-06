@@ -43,7 +43,7 @@ const Teams = () => {
 				placement="sm:left-[50%] left-[100%] translate-x-[-100%] sm:translate-x-0"
 				id="teams"
 			/>
-			<DecoDots className="absolute top-[70px] sm:top-[-130px] left-20px] sm:left-[-80px] w-[120px] h-[120px] sm:w-[200px] sm:h-[200px]" />
+			<DecoDots className="absolute top-[150px] left-[20px] sm:left-[-80px] w-[120px] h-[120px] sm:w-[200px] sm:h-[200px]" />
 			<div className="relative w-full grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:p-[30px] mt-[50px]">
 				{teams.map((team, id) => {
 					return (
