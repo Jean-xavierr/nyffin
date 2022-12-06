@@ -12,6 +12,7 @@ This app uses `Docker` and `docker-compose`, thus we use a Makefile:
 - `up` (start dev server)
 - `exec` (exec shell in docker container)
 - `build` (build for production)
+- `serve` (create local server to test local build)
 - `deploy` (push prod build)
 - `re` (fclean & all)
 - `reload` (down & all)
