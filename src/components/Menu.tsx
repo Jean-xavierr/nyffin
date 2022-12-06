@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { FC } from 'react';
 import SocialBar from './SocialBar';
 import Email from './Svg/Email';
-const Menu = () => {
+
+interface Props {
+	className?: string;
+	toggleDisplay: () => void;
+}
+
+const Menu: FC<Props> = ({ className, toggleDisplay }) => {
 	const links = ['About', 'Teams', 'Achievements'];
 
 	return (
-		<div className="absolute bg-nyffinBlack w-screen h-screen top-0 left-0 flex flex-col items-center justify-around">
+		<div
+			className={
+				'absolute bg-nyffinBlack w-screen h-screen top-0 left-0 flex flex-col items-center justify-around ' +
+				className
+			}
+		>
 			<div className="flex flex-col border-l-2 border-nyffinRed w-[250px] my-[100px]">
 				{links.map((link, id) => {
 					return (
@@ -13,6 +24,7 @@ const Menu = () => {
 							className="px-[20px] py-[10px]"
 							href={'#' + link.toLowerCase()}
 							key={id}
+							onClick={toggleDisplay}
 						>
 							{link}
 						</a>
