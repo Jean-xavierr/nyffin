@@ -63,7 +63,7 @@ const Email: FC<Props> = ({ className }) => {
 			setTimer(
 				setTimeout(() => {
 					setShowCopyToast(false);
-				}, 2000)
+				}, 1500)
 			);
 		} catch (e) {
 			console.error(e);
@@ -79,12 +79,12 @@ const Email: FC<Props> = ({ className }) => {
 		>
 			<span
 				className={
-					(showCopyToast ? 'flex' : 'hidden') +
-					' animate-bounce justify-center items-center absolute right-1 bottom-10 py-2 px-4 bg-nyffinRed border-2 rounded-md text-lg'
+					(showCopyToast ? ' opacity-100 ' : 'opacity-0 ') +
+					'flex transition-opacity animate-bounce justify-center items-center absolute right-[30%] bottom-10 py-1 px-4 bg-nyffinRed rounded-md text-lg after:absolute after:top-[99%] after:left-[calc(50% - 10px)] after:border-t-[10px] after:border-t-nyffinRed after:border-l-[10px] after:border-l-transparent after:border-r-[10px] after:border-r-transparent '
 				}
 				aria-hidden="true"
 			>
-				Copied!
+				Copied !
 			</span>
 			{isHovering ? <OpenEmailIcon /> : <EmailIcon />}
 			<p className="text-[22px] ml-2">{emailAddress}</p>
