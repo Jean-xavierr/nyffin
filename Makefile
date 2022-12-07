@@ -14,6 +14,9 @@ exec:
 build:
 	$(DOCKER) exec -it $(NAME) yarn build
 
+serve:
+	$(DOCKER) exec -it $(NAME) yarn serve
+
 deploy:
 	@./deploy.sh
 
