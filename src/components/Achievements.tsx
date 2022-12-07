@@ -4,6 +4,7 @@ import Medal from './Svg/Medal';
 import PlayButton from './Svg/PlayButton';
 import Trophy from './Svg/Trophy';
 import axios from 'axios';
+import Link from './Svg/Link';
 
 const Achievements = () => {
 	const [AchievementsData, setAchievementsData] = useState<IAchievement[]>([]);
@@ -118,7 +119,11 @@ const Achievements = () => {
 							<div className="w-[35px] order-3 min-[460px]:order-4">
 								{achievement.url != '' && (
 									<a href={achievement.url} target="_blank">
-										<PlayButton className="text-nyffinRed w-[30px] h-[30px]" />
+										{achievement.url_type == 'video' ? (
+											<PlayButton className="text-nyffinRed w-[22px] h-[22px]" />
+										) : (
+											<Link className="text-nyffinRed w-[22px] h-[22px]" />
+										)}
 									</a>
 								)}
 							</div>

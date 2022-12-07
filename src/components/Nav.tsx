@@ -14,7 +14,10 @@ const Nav = () => {
 	};
 
 	return (
-		<div className="bg-nyffinRed w-full px-[50px] py-[10px] fixed z-50 flex justify-center sm:justify-between items-center text-white font-alumniSans text-[25px] font-medium tracking-[2px] uppercase">
+		<div
+			id="nav"
+			className=" transition-[background-color] duration-[.2s] ease-in-out w-full px-[50px] py-[0px] fixed z-50 flex justify-center sm:justify-between items-center text-white font-alumniSans text-[25px] font-medium tracking-[2px] uppercase"
+		>
 			<Burger
 				display={displayMenu}
 				className={
@@ -26,7 +29,7 @@ const Nav = () => {
 				className={displayMenu ? '' : 'hidden'}
 				toggleDisplay={toggleDisplayMenu}
 			/>
-			<NyffinLogo className="w-[120px] h-[60px] sm:basis-[50%]" />
+			<NyffinLogo className="w-[120px] h-[60px] sm:basis-[50%] mt-[3px]" />
 			<div className="hidden sm:flex justify-between w-[400px] mx-[20px]">
 				{links.map((link, id) => {
 					return (
