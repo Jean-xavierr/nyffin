@@ -20,7 +20,7 @@ const Achievements = () => {
 			.get<IAchievement[]>('/config/achievements-data.json')
 			.then((res) => setAchievementsData(res.data))
 			.catch(console.error);
-	});
+	}, []);
 
 	const get_rank_color = (rank: number) => {
 		if (rank < 4 && rank != 0) return rank_color[rank - 1];
@@ -110,7 +110,7 @@ const Achievements = () => {
 							</div>
 							{date_format(achievement.date)}
 							<div
-								className="text-[20px] order-4 min-[460px]:order-3"
+								className="text-[20px] order-4 min-[460px]:order-3 grow"
 								style={{ flexBasis: '70%' }}
 							>
 								{achievement.event_name}

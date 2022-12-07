@@ -18,8 +18,7 @@ const Nav = () => {
 			<Burger
 				display={displayMenu}
 				className={
-					'absolute top-[23px] sm:hidden z-50 ' +
-					(displayMenu ? 'right-[20px]' : 'left-[20px]')
+					'absolute top-[23px] sm:hidden z-50 right-[20px] cursor-pointer'
 				}
 				toggleDisplay={toggleDisplayMenu}
 			></Burger>
