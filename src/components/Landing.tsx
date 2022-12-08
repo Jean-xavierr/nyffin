@@ -6,18 +6,18 @@ import NyffinMascot from './Svg/NyffinMascot';
 const Landing = () => {
 	return (
 		<div className="pt-[100px] landing-skewed-bg relative w-[100%] z-40 pb-[100px] flex justify-center items-start">
-			<div className="relative inline-block m-auto">
+			<div className="relative inline-block m-auto w-full max-w-[1565px]">
 				<div className="text-white font-alumniSans absolute top-[75%] md:top-[24%] left-[-38px] md:left-[-60px] text-[7vw] md:text-[40px] tracking-[4px] opacity-[0.3] rotate-[-90deg]">
 					play to win
 					<span className=" block absolute h-[2px] w-[30%] bg-white right-[-35%] bottom-[30%]"></span>
 					<span className="block absolute h-[4px] w-[4px] rounded-[4px] bg-white right-[-42%] bottom-[25%] md:bottom-[28%]"></span>
 				</div>
 
-				<div className="flex flex-col md:flex-row justify-center md:pt-[100px]">
+				<div className="flex flex-col md:flex-row justify-center lg:pt-[100px] lg:px-[20px]">
 					{/* FUTURE */}
-					<div className="sm:pt-[22px] md:order-2 w-full relative px-[15px] md:w-[1030px] lg:ml-[-220px]">
+					<div className="sm:pt-[22px] md:order-2 w-full m-auto relative px-[15px] min-[1280px]:max-w-[1030px] sm:max-w-[690px] md:m-0 md:ml-[-220px]">
 						<div className="inline relative">
-							<p className="relative inline-block font-bebasNeue text-white text-outline outline-4 text-[15vw] md:text-[110px] tracking-[5px] md:tracking-[15px] md:leading-[110px] leading-none">
+							<p className="relative inline-block font-bebasNeue text-white text-outline outline-4 text-[15vw] md:text-[min(8vw,110px)] tracking-[5px] md:tracking-[.145em] md:leading-[min(8vw,110px)] leading-none">
 								THE FUTURE OF
 							</p>
 							<span
@@ -30,12 +30,12 @@ const Landing = () => {
 						</p>
 					</div>
 
-					<NyffinMascot className="block w-full h-full px-[35px] py-[10px] md:p-0 md:max-w-[650px] md:mt-[70px] z-10 md:order-1" />
+					<NyffinMascot className="w-full h-full mx-auto md:mx-initial md:w-auto md:h-auto max-w-[650px] px-[35px] py-[10px] md:p-0 md:max-w-[650px] md:mt-[70px] z-10 md:order-1" />
 
-					<DecoDots
+					{/* <DecoDots
 						className="text-white sm:ml-[-100px] sm:mt-[200px] md:order-3 absolute right-[-50px] w-[30vw] md:relative md:w-[205px] md:right-auto"
 						opacity="0.29"
-					/>
+					/> */}
 					<div className="md:absolute md:bottom-[20%] md:right-[10%] text-right">
 						<div className="relative inline-block text-white font-alumniSans text-[22px] sm:text-[35px] tracking-[3px] mr-[40px] sm:mr-[100px]">
 							ESPORT TEAM
