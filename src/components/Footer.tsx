@@ -1,6 +1,6 @@
 import React from 'react';
 import SocialBar from '~/src/components/SocialBar';
-import Email from './Svg/Email';
+import Email from './Email';
 import NyffinLogo from './Svg/NyffinLogo';
 
 const Footer = () => {

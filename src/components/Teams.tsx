@@ -6,15 +6,15 @@ const Teams = () => {
 	const teams = [
 		{
 			game: 'Hado',
-			img: '/assets/img/hado_img.jpg',
+			img: '/assets/img/hado_img.jpeg',
 			logo: '/assets/img/hado_logo.png',
-			img_style: 'sm:hado brightness-[0.9] sm:brightness-100',
+			img_style: 'sm:hado',
 		},
 		{
 			game: 'Ultimechs',
-			img: '/assets/img/ultimechs_img.png',
+			img: '/assets/img/ultimechs_img.jpeg',
 			logo: '/assets/img/ultimechs_logo.png',
-			img_style: 'ultimechs brightness-[0.9] sm:brightness-100',
+			img_style: 'ultimechs',
 		},
 		{
 			game: 'Echo Arena',
@@ -53,7 +53,7 @@ const Teams = () => {
 						>
 							<img
 								className={
-									'absolute w-full h-full lg:max-w-[300px] lg:h-[500px] object-cover ' +
+									'absolute w-full h-full lg:max-w-[300px] lg:min-h-[500px] object-cover ' +
 									team.img_style
 								}
 								src={team.img}

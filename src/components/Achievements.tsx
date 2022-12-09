@@ -53,7 +53,7 @@ const Achievements = () => {
 		<div className="mt-[150px] mb-[150px] sm:mb-[250px]">
 			<SectionTitle
 				title="All our achievements"
-				subtitle="???????????????????"
+				subtitle=""
 				backtext="Achievements"
 				mainColor="text-white"
 				secondColor="text-nyffinBlack"

@@ -44,13 +44,16 @@ const SectionTitle: FC<Props> = ({
 				>
 					{title}
 				</h2>
-				<p
-					className={
-						' mt-[-12px] uppercase font-bebasNeue text-xl ' + secondColor
-					}
-				>
-					{subtitle}
-				</p>
+				{subtitle != '' && (
+					<p
+						className={
+							' mt-[-12px] uppercase font-bebasNeue text-xl ' +
+							secondColor
+						}
+					>
+						{subtitle}
+					</p>
+				)}
 			</div>
 		</div>
 	);

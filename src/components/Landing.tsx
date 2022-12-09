@@ -14,7 +14,7 @@ const Landing = () => {
 					<span className="block absolute h-[4px] w-[4px] rounded-[4px] bg-white right-[-42%] bottom-[25%] min-[980px]:bottom-[28%]"></span>
 				</div>
 
-				<div className="flex flex-col min-[980px]:flex-row justify-center min-[980px]:pt-[100px] lg:px-[20px]">
+				<div className="flex flex-col min-[980px]:flex-row justify-center min-[980px]:pt-[50px] lg:px-[20px]">
 					{/* FUTURE */}
 					<div className="sm:pt-[22px] min-[980px]:order-2 w-full m-auto relative px-[15px] max-w-[1030px] min-[980px]:m-0 min-[980px]:ml-[-220px]">
 						<div className="inline relative">
@@ -26,7 +26,7 @@ const Landing = () => {
 								className="block absolute bg-white h-[2px] w-[100%] min-[980px]:w-[calc(100%-15px)] bottom-[-10px] min-[980px]:bottom-[-15px]"
 							></span>
 						</div>
-						<p className="text-white font-anton text-right text-[13vw] tracking-[2px] min-[980px]:text-[min(120px,7vw)] min-[980px]:leading-[min(120px,7vw)] min-[980px]:tracking-[5px] min-[980px]:mt-[20px] leading-none mt-[15px]">
+						<p className="text-white font-anton text-right text-[13vw] tracking-[2px] min-[980px]:text-[min(120px,8vw)] min-[980px]:leading-[min(120px,8vw)] min-[980px]:tracking-[5px] min-[980px]:mt-[20px] leading-none mt-[15px]">
 							VIRTUAL REALITY
 						</p>
 					</div>
@@ -34,7 +34,7 @@ const Landing = () => {
 					<NyffinMascot className="w-full h-full mx-auto min-[980px]:mx-initial min-[980px]:w-auto min-[980px]:h-auto max-w-[650px] px-[35px] py-[10px] min-[980px]:p-0 min-[980px]:max-w-[650px] min-[980px]:mt-[70px] z-10 min-[980px]:order-1" />
 
 					<DecoDots
-						className="text-white min-[980px]:ml-[-100px] min-[980px]:mt-[200px] absolute right-[-50px] w-[30vw] min-[980px]:w-[min(15vw,205px)]"
+						className="text-white min-[980px]:ml-[-100px] min-[980px]:mt-[200px] absolute right-[0px] w-[30vw] min-[980px]:w-[min(15vw,205px)]"
 						opacity="0.29"
 					/>
 

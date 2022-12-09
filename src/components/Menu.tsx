@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import SocialBar from './SocialBar';
-import Email from './Svg/Email';
+import Email from './Email';
 
 interface Props {
 	className?: string;
