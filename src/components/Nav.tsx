@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Menu from './Menu';
-import Burger from './Svg/Burger';
+import Burger from './Burger';
 import NyffinLogo from './Svg/NyffinLogo';
 
 const Nav = () => {
