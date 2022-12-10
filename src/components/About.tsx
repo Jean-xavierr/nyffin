@@ -2,16 +2,16 @@ import React from 'react';
 import SectionTitle from './SectionTitle';
 import SocialBar from './SocialBar';
 import SvgDiscord from './Svg/Discord';
-import NyffinDiscordImg from '~/assets/img/nyffin_mascot_watermark.jpg';
 import ExternalLinkIcon from './Svg/ExternalLinkIcon';
 import DecoReflection from './Svg/DecoReflection';
 import NyffinMascot from './Svg/NyffinMascot';
+import Statistics from './Statistics';
 
 const About = () => {
 	const stats = [
-		{ num: '2022', text: 'SINCE' },
-		{ num: '2', text: 'TEAMS' },
-		{ num: '5', text: 'PLAYERS' },
+		{ num: '2022', text: 'SINCE', order: '' },
+		{ num: '2', text: 'TEAMS', order: 'lg-' },
+		{ num: '5', text: 'PLAYERS', order: 'lg-' },
 	];
 	return (
 		<div className="w-[100%] text-white bg-nyffinBlack sm:bg-transparent sm:about-skewed-bg relative mb-[130px] sm:mb-[200px] mt-[-300px] min-[980px]:mt-[-200px] pt-[300px] pb-[150px] sm:pb-0">
@@ -27,22 +27,7 @@ const About = () => {
 				id="about"
 			/>
 			<div className="max-w-[850px] m-auto px-[30px]">
-				<div className="select-none max-w-[800px] m-auto flex justify-around py-[20px] md:py-[80px]">
-					{stats.map((stat) => {
-						return (
-							<div
-								key={stat.text}
-								className="min-w-[150px] inline-block font-bold"
-							>
-								<p className="text-[80px] leading-[60px] text-center">
-									{stat.num}
-								</p>
-								<p className="text-[20px] text-center">{stat.text}</p>
-							</div>
-						);
-					})}
-				</div>
-
+				<Statistics />
 				<div className="relative grid grid-cols-1 my-[50px] gap-[20px]">
 					<p className="relative z-20 max-w-[550px] text-justify py-[40px] text-[18px]">
 						Fondée officiellement en 2022, Nyffin est une{' '}

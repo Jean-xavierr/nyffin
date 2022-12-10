@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import SocialBar from './SocialBar';
 import Email from './Email';
+import NyffinLogo from './Svg/NyffinLogo';
 
 interface Props {
 	className?: string;
@@ -13,11 +14,12 @@ const Menu: FC<Props> = ({ className, toggleDisplay }) => {
 	return (
 		<div
 			className={
-				'absolute bg-nyffinBlack w-screen h-screen top-0 left-0 flex flex-col items-center justify-around ' +
+				'absolute bg-nyffinBlack w-screen h-screen top-0 left-0 flex flex-col items-center justify-around pb-[80px] ' +
 				className
 			}
 		>
-			<div className="flex flex-col border-l-2 border-nyffinRed w-[250px] my-[100px]">
+			<NyffinLogo className="w-[100px] h-[80px] mt-[10px]" />
+			<div className="flex flex-col border-l-2 border-nyffinRed w-[250px] my-[80px]">
 				{links.map((link, id) => {
 					return (
 						<a
@@ -44,7 +46,7 @@ const Menu: FC<Props> = ({ className, toggleDisplay }) => {
 				</a>
 			</div> */}
 			<Email className="" />
-			<SocialBar className="w-[300px] bottom-0" />
+			<SocialBar className="w-[300px]" />
 		</div>
 	);
 };
