@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from './Menu';
 import Burger from './Svg/Burger';
 import NyffinLogo from './Svg/NyffinLogo';
@@ -7,11 +7,12 @@ const Nav = () => {
 	const links = ['About', 'Teams', 'Achievements'];
 	const [displayMenu, setDisplayMenu] = useState(false);
 
-	const toggleDisplayMenu = () => {
-		setDisplayMenu(!displayMenu);
-		if (displayMenu) document.body.style.overflow = 'unset';
+	const toggleDisplayMenu = () => setDisplayMenu((oldValue) => !oldValue);
+
+	useEffect(() => {
+		if (!displayMenu) document.body.style.overflow = 'unset';
 		else document.body.style.overflow = 'hidden';
-	};
+	}, [displayMenu]);
 
 	return (
 		<div
@@ -25,10 +26,7 @@ const Nav = () => {
 				}
 				toggleDisplay={toggleDisplayMenu}
 			></Burger>
-			<Menu
-				className={displayMenu ? '' : 'hidden'}
-				toggleDisplay={toggleDisplayMenu}
-			/>
+			{displayMenu && <Menu toggleDisplay={toggleDisplayMenu} />}
 			<NyffinLogo className="w-[120px] h-[60px] sm:basis-[50%] mt-[3px]" />
 			<div className="hidden sm:flex justify-between w-[400px] mx-[20px]">
 				{links.map((link, id) => {

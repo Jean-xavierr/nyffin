@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import SocialBar from './SocialBar';
 import Email from './Email';
 import NyffinLogo from './Svg/NyffinLogo';
@@ -11,6 +11,15 @@ interface Props {
 const Menu: FC<Props> = ({ className, toggleDisplay }) => {
 	const links = ['About', 'Teams', 'Achievements'];
 
+	useEffect(() => {
+		const handleResize: EventListener = (_event) => {
+			toggleDisplay();
+		};
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
 	return (
 		<div
 			className={
@@ -18,7 +27,9 @@ const Menu: FC<Props> = ({ className, toggleDisplay }) => {
 				className
 			}
 		>
-			<NyffinLogo className="w-[100px] h-[80px] mt-[10px]" />
+			<div className="mt-[10px]" onClick={toggleDisplay}>
+				<NyffinLogo className="w-[100px] h-[80px]" />
+			</div>
 			<div className="flex flex-col border-l-2 border-nyffinRed w-[250px] my-[80px]">
 				{links.map((link, id) => {
 					return (
