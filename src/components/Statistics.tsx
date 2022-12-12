@@ -37,8 +37,6 @@ const Statistics = () => {
 				),
 			delay
 		);
-
-		return () => {};
 	}, [index]);
 
 	return (

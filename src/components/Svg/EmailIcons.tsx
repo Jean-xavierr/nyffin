@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-export const EmailIcon = () => {
+export const EmailIcon: FC = () => {
 	return (
 		<svg
 			width="25"
@@ -18,7 +18,7 @@ export const EmailIcon = () => {
 	);
 };
 
-export const OpenEmailIcon = () => {
+export const OpenEmailIcon: FC = () => {
 	return (
 		<svg
 			width="25"
