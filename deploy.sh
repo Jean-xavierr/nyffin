@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -eo pipefail
 
 LAST_COMMIT="$(git rev-parse --short HEAD)"
 SRC_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
