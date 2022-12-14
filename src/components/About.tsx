@@ -21,7 +21,7 @@ const About = () => {
 				placement="min-[490px]:right-[50%]"
 				id="about"
 			/>
-			<div className="max-w-[850px] m-auto px-[30px]">
+			<div className="max-w-[850px] m-auto px-[30px] relative">
 				<Statistics />
 				<div className="relative grid grid-cols-1 my-[50px] gap-[20px]">
 					<p className="relative z-20 max-w-[550px] text-justify py-[40px] text-[18px]">
@@ -84,7 +84,7 @@ const About = () => {
 
 			{/* DISCORD BUTTON */}
 			<div className="absolute bottom-[-70px] left-[50%] translate-x-[-50%] sm:relative sm:bottom-0">
-				<p className="block sm:hidden uppercase text-[12px] tracking-[2px] text-center mx-auto mt-[100px] mb-[-10px]">
+				<p className="block sm:hidden uppercase text-[12px] tracking-[2px] text-center mx-auto mb-[-10px]">
 					Actus VR, évènements gaming ...
 				</p>
 				<a
