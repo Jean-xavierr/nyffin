@@ -8,11 +8,6 @@ import NyffinMascot from './Svg/NyffinMascot';
 import Statistics from './Statistics';
 
 const About = () => {
-	const _stats = [
-		{ num: '2022', text: 'SINCE', order: '' },
-		{ num: '2', text: 'TEAMS', order: 'lg-' },
-		{ num: '5', text: 'PLAYERS', order: 'lg-' },
-	];
 	return (
 		<div className="w-[100%] text-white bg-nyffinBlack sm:bg-transparent sm:about-skewed-bg relative mb-[130px] sm:mb-[200px] mt-[-300px] min-[980px]:mt-[-200px] pt-[300px] pb-[150px] sm:pb-0">
 			<DecoReflection className="absolute bottom-[50px] left-0" />
