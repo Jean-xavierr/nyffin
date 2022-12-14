@@ -16,6 +16,7 @@ const SocialBar: FC<Props> = ({ className, iconClassName }) => {
 					<a
 						href={media.url}
 						target="_blank"
+						rel="noreferrer"
 						key={media.name}
 						className="hover:transition-all hover:scale-125"
 					>

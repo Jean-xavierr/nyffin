@@ -8,11 +8,6 @@ import NyffinMascot from './Svg/NyffinMascot';
 import Statistics from './Statistics';
 
 const About = () => {
-	const stats = [
-		{ num: '2022', text: 'SINCE', order: '' },
-		{ num: '2', text: 'TEAMS', order: 'lg-' },
-		{ num: '5', text: 'PLAYERS', order: 'lg-' },
-	];
 	return (
 		<div className="w-[100%] text-white bg-nyffinBlack sm:bg-transparent sm:about-skewed-bg relative mb-[130px] sm:mb-[200px] mt-[-300px] min-[980px]:mt-[-200px] pt-[300px] pb-[150px] sm:pb-0">
 			<DecoReflection className="absolute bottom-[50px] left-0" />
@@ -96,6 +91,7 @@ const About = () => {
 				<a
 					href="https://discord.gg/JFV3K9GCjB"
 					target="_blank"
+					rel="noreferrer"
 					className="w-[280px] my-[20px] mx-auto relative sm:absolute sm:left-[10%] sm:bottom-[-200px] sm:w-[370px] rounded-[4px] p-[10px] bg-nyffinRed text-white flex items-center justify-between flex-wrap sm:flex-nowrap hover:transition-all hover:scale-105"
 				>
 					<ExternalLinkIcon className="w-[18px] h-[18px] absolute right-[4px] top-[6px]" />

@@ -118,7 +118,11 @@ const Achievements = () => {
 							</div>
 							<div className="w-[35px] order-3 min-[460px]:order-4">
 								{achievement.url != '' && (
-									<a href={achievement.url} target="_blank">
+									<a
+										href={achievement.url}
+										target="_blank"
+										rel="noreferrer"
+									>
 										{achievement.url_type == 'video' ? (
 											<PlayButton className="text-nyffinRed w-[22px] h-[22px]" />
 										) : (
