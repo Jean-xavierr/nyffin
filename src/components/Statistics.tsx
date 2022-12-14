@@ -22,8 +22,9 @@ const Statistics: FC = () => {
 	const timeoutRef = useRef(0);
 	const resetTimeout = () => clearTimeout(timeoutRef.current);
 
+	const shouldSliderActive = () => window.innerWidth <= 450;
 	const [index, setIndex] = useState(0);
-	const [isSliderActive, setIsSliderActive] = useState(false);
+	const [isSliderActive, setIsSliderActive] = useState(shouldSliderActive());
 
 	useEffect(() => {
 		if (!isSliderActive) {
@@ -40,13 +41,12 @@ const Statistics: FC = () => {
 
 	useEffect(() => {
 		const handleResize: EventListener = (_event) => {
-			setIsSliderActive(window.innerWidth <= 450);
+			setIsSliderActive(shouldSliderActive());
 		};
 
 		window.addEventListener('resize', handleResize);
 		return () => window.removeEventListener('resize', handleResize);
 	}, []);
-
 	return (
 		<div className="SLIDESHOW mx-auto my-0 overflow-hidden max-w-[250px] min-[450px]:max-w-[800px] min-[450px]:overflow-visible md:py-[80px]">
 			<div
