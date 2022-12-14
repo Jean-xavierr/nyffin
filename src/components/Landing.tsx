@@ -47,7 +47,7 @@ const Landing = () => {
 				</div>
 
 				<a href="#about">
-					<ArrowDown className="mx-auto h-[25px] w-[25px] sm:w-[48px] sm:h-[30px]  mt-[30px] min-[980px]:mt-[-100px]" />
+					<ArrowDown className="relative mx-auto h-[25px] w-[25px] sm:w-[48px] sm:h-[30px]  mt-[30px] min-[980px]:mt-[-100px]" />
 				</a>
 			</div>
 		</div>
