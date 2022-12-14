@@ -3,30 +3,35 @@
 		"rank": "0",
 		"date": "",
 		"event_name": "PlayOff Ultimechs",
-		"url": "https://vrmasterleague.com/Ultimechs/Teams/Cv5yGiCp1L2vTEdv80Gznw2"
+		"url": "https://vrmasterleague.com/Ultimechs/Teams/Cv5yGiCp1L2vTEdv80Gznw2",
+		"url_type": "link"
 	},
 	{
 		"rank": "2",
 		"date": "17.07.2022",
 		"event_name": "Championnat de France de Hado",
-		"url": "https://www.youtube.com/watch?v=kP5CWW_PfgA,"
+		"url": "https://www.youtube.com/watch?v=kP5CWW_PfgA",
+		"url_type": "video"
 	},
 	{
 		"rank": "2",
 		"date": "01.07.2022",
 		"event_name": "Tournoi MindOut: Elven Assassin 2vs2",
-		"url": "https://mindout.fr/,"
+		"url": "https://mindout.fr/",
+		"url_type": "link"
 	},
 	{
 		"rank": "1",
 		"date": "22.04.2022",
 		"event_name": "Tournoi MindOut: Synthriders, Blaston, Racket NX",
-		"url": "https://mindout.fr/,"
+		"url": "https://mindout.fr/",
+		"url_type": "link"
 	},
 	{
 		"rank": "1",
 		"date": "24.09.2021",
 		"event_name": "Tournoi MindOut: Tower Tag 2vs2",
-		"url": "https://mindout.fr/,"
+		"url": "https://mindout.fr/",
+		"url_type": "link"
 	}
 ]

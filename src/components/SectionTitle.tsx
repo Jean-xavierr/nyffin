@@ -28,7 +28,7 @@ const SectionTitle: FC<Props> = ({
 			<p
 				aria-hidden="true"
 				className={
-					'select-none absolute z-0 leading-[80px] tracking-[.20em] uppercase font-bebasNeue text-outline text-[200px] ' +
+					'select-none absolute z-0 leading-[80px] tracking-[.10em] sm:tracking-[.20em] uppercase font-bebasNeue text-outline lg:text-[200px] md:text-[150px] text-[95px] top-[20px] md:top-auto ' +
 					placement +
 					' ' +
 					backtextColor
@@ -37,16 +37,23 @@ const SectionTitle: FC<Props> = ({
 				{backtext}
 			</p>
 			<div className="relative text-center z-40">
-				<h2 className={'uppercase font-anton text-[46px] ' + mainColor}>
-					{title}
-				</h2>
-				<p
+				<h2
 					className={
-						' mt-[-12px] uppercase font-bebasNeue text-xl ' + secondColor
+						'uppercase font-anton text-[35px] sm:text-[46px] ' + mainColor
 					}
 				>
-					{subtitle}
-				</p>
+					{title}
+				</h2>
+				{subtitle != '' && (
+					<p
+						className={
+							' mt-[-12px] uppercase font-bebasNeue text-xl ' +
+							secondColor
+						}
+					>
+						{subtitle}
+					</p>
+				)}
 			</div>
 		</div>
 	);

@@ -2,12 +2,11 @@ import React, { FC } from 'react';
 
 interface Props {
 	className?: string;
-	style?: {};
 }
 
-const NyffinLogo: FC<Props> = ({ className, style }) => {
+const NyffinLogo: FC<Props> = ({ className }) => {
 	return (
-		<a href="#" className={className} style={style}>
+		<a href="#" className={className}>
 			<svg
 				width="149"
 				height="52"

@@ -15,10 +15,6 @@ const ExternalLinkIcon: FC<Props> = ({ className }) => {
 			enableBackground="new 0 0 1000 1000"
 			className={className}
 		>
-			<metadata>
-				{' '}
-				Svg Vector Icons : http://www.onlinewebfonts.com/icon{' '}
-			</metadata>
 			<g>
 				<g transform="translate(0.000000,511.000000) scale(0.100000,-0.100000)">
 					<path

@@ -1,48 +1,38 @@
 import React from 'react';
 import SectionTitle from './SectionTitle';
-
-import HadoLogo from '~/assets/img/hado_logo.png';
-import HadoImg from '~/assets/img/hado_img.jpg';
-
-import BattleArenaImg from '~/assets/img/battle_arena_img.png';
-import BattleArenaLogo from '~/assets/img/battle_arena_logo.png';
-
-import BlastonLogo from '~/assets/img/blaston_logo.png';
-import BlastonImg from '~/assets/img/blaston_img.jpg';
-
-import UltimechsLogo from '~/assets/img/ultimechs_logo.png';
-import UltimechsImg from '~/assets/img/ultimechs_img.png';
 import DecoDots from './Svg/DecoDots';
 
 const Teams = () => {
 	const teams = [
 		{
 			game: 'Hado',
-			img: HadoImg,
-			logo: HadoLogo,
-			img_position: 'hado_position',
-		},
-		{
-			game: 'Battle Arena',
-			img: BattleArenaImg,
-			logo: BattleArenaLogo,
-			img_position: 'eva_position',
-		},
-		{
-			game: 'Blaston',
-			img: BlastonImg,
-			logo: BlastonLogo,
-			img_position: 'blaston_position',
+			img: '/assets/img/hado_img.jpeg',
+			logo: '/assets/img/hado_logo.png',
+			img_style: 'sm:hado',
 		},
 		{
 			game: 'Ultimechs',
-			img: UltimechsImg,
-			logo: UltimechsLogo,
-			img_position: '',
+			img: '/assets/img/ultimechs_img.jpeg',
+			logo: '/assets/img/ultimechs_logo.png',
+			img_style: 'ultimechs',
+		},
+		{
+			game: 'Echo Arena',
+			img: '/assets/img/echo_arena_img.jpg',
+			logo: '/assets/img/echo_arena_logo.png',
+			img_style: 'object-top sm:brightness-[1.3] group-hover:brightness-100',
+		},
+		{
+			game: 'Battle Arena',
+			img: '/assets/img/battle_arena_img.png',
+			logo: '/assets/img/battle_arena_logo.png',
+			img_style:
+				'eva sm:eva_sm lg:object-center sm:brightness-[2] group-hover:brightness-120',
 		},
 	];
+
 	return (
-		<div className="max-w-[1400px] m-auto pb-[100px]">
+		<div className="max-w-[1400px] m-auto pb-[100px] relative">
 			<SectionTitle
 				mainColor="text-black"
 				secondColor="text-nyffinRed"
@@ -50,26 +40,28 @@ const Teams = () => {
 				title="OUR TEAMS"
 				subtitle="Discover our top players"
 				backtextColor="text-nyffinGray"
-				placement=" left-[50%]"
+				placement="sm:left-[50%] left-[100%] translate-x-[-100%] sm:translate-x-0"
 				id="teams"
 			/>
-
-			<div className="relative flex justify-between m-[50px]">
-				<DecoDots className="absolute top-[-130px] left-[-80px]" />
+			<DecoDots className="absolute top-[150px] left-[20px] sm:left-[-80px] w-[120px] h-[120px] sm:w-[200px] sm:h-[200px]" />
+			<div className="relative w-full grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 sm:p-[30px] mt-[50px]">
 				{teams.map((team, id) => {
 					return (
 						<div
 							key={id}
-							className="relative w-[300px] h-[500px] grayscale hover:grayscale-0 grid grid-cols-1 items-center justify-items-center"
+							className="group relative w-full h-[160px] sm:h-[calc(50vw-60px-16px)] lg:max-w-[300px] lg:h-[500px] sm:grayscale hover:grayscale-0 grid grid-cols-1 items-center justify-items-center"
 						>
 							<img
 								className={
-									'absolute top-0 w-[300px] h-[500px] object-cover ' +
-									team.img_position
+									'absolute w-full h-full lg:max-w-[300px] lg:min-h-[500px] object-cover ' +
+									team.img_style
 								}
 								src={team.img}
 							/>
-							<img src={team.logo} className="relative" />
+							<img
+								src={team.logo}
+								className="relative px-[20px] max-w-[300px] lg:w-full"
+							/>
 						</div>
 					);
 				})}

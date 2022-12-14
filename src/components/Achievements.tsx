@@ -4,6 +4,7 @@ import Medal from './Svg/Medal';
 import PlayButton from './Svg/PlayButton';
 import Trophy from './Svg/Trophy';
 import axios from 'axios';
+import Link from './Svg/Link';
 
 const Achievements = () => {
 	const [AchievementsData, setAchievementsData] = useState<IAchievement[]>([]);
@@ -20,7 +21,7 @@ const Achievements = () => {
 			.get<IAchievement[]>('/config/achievements-data.json')
 			.then((res) => setAchievementsData(res.data))
 			.catch(console.error);
-	});
+	}, []);
 
 	const get_rank_color = (rank: number) => {
 		if (rank < 4 && rank != 0) return rank_color[rank - 1];
@@ -49,30 +50,30 @@ const Achievements = () => {
 	};
 
 	return (
-		<div className="mt-[150px] mb-[250px]">
+		<div className="mt-[150px] mb-[150px] sm:mb-[250px]">
 			<SectionTitle
 				title="All our achievements"
-				subtitle="???????????????????"
+				subtitle=""
 				backtext="Achievements"
 				mainColor="text-white"
 				secondColor="text-nyffinBlack"
 				backtextColor="text-black/[.35]"
-				placement="top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+				placement="top-[50%] left-[50%] translate-x-[-50%]"
 				className="before:block before:absolute before:-inset-0 before:skew-y-[8deg] before:bg-nyffinRed "
 				id="achievements"
 			/>
 
-			<p className="mx-[50px] my-[100px] text-center text-[18px]">
+			<p className="max-w-[810px] px-[30px] mx-auto my-[70px] sm:my-[120px] sm:text-center text-justify text-[18px]">
 				Depuis 2021, tant dans la réalité virtuelle que dans la réalité
-				augmentée, nos équipes ont remporté plusieurs prix
-				<br /> avec l'ambition d'en gagner d'autres.
+				augmentée, nos équipes ont remporté plusieurs prix avec l'ambition
+				d'en gagner d'autres.
 			</p>
-			<div className="max-w-[800px] m-auto border-y divide-y">
+			<div className="max-w-[800px] min-[840px]:mx-auto border-y divide-y mx-[20px]">
 				{AchievementsData.map((achievement, id) => {
 					return (
 						<div
 							key={id}
-							className="flex flex-row py-[5px] items-center gap-[40px]"
+							className="flex flex-row flex-wrap min-[460px]:flex-nowrap py-[5px] items-center gap-x-[40px] justify-between"
 						>
 							<div className="flex items-center gap-3 min-w-[100px]">
 								{achievement.rank < 4 && achievement.rank != 0 ? (
@@ -109,13 +110,24 @@ const Achievements = () => {
 								</p>
 							</div>
 							{date_format(achievement.date)}
-							<div className="text-[20px]" style={{ flexBasis: '70%' }}>
+							<div
+								className="text-[20px] order-4 min-[460px]:order-3 grow"
+								style={{ flexBasis: '70%' }}
+							>
 								{achievement.event_name}
 							</div>
-							<div className="w-[35px]">
+							<div className="w-[35px] order-3 min-[460px]:order-4">
 								{achievement.url != '' && (
-									<a href={achievement.url} target="_blank">
-										<PlayButton className="text-nyffinRed w-[30px] h-[30px]" />
+									<a
+										href={achievement.url}
+										target="_blank"
+										rel="noreferrer"
+									>
+										{achievement.url_type == 'video' ? (
+											<PlayButton className="text-nyffinRed w-[22px] h-[22px]" />
+										) : (
+											<Link className="text-nyffinRed w-[22px] h-[22px]" />
+										)}
 									</a>
 								)}
 							</div>

@@ -6,4 +6,5 @@ declare interface IAchievement {
 	date: string;
 	event_name: string;
 	url: string;
+	url_type: string;
 }
