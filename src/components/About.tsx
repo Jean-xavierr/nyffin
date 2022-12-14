@@ -60,9 +60,8 @@ const About = () => {
 					<p className="max-w-[550px] text-justify justify-self-end py-[50px] sm:py-[20px] text-[18px]">
 						L'Esport VR/AR modifie la façon dont les joueurs interagissent
 						: la <b>compétition au plus haut niveau</b> devient une
-						véritable
-						<b>activité physique</b>, cela se rapproche plus du sport
-						traditionnel qu'à des titres d'esports classique. Cette
+						véritable <b>activité physique</b>, cela se rapproche plus du
+						sport traditionnel qu'à des titres d'esports classique. Cette
 						discipline en plein essort ne ressemble à rien de ce que nous
 						avons pu voir auparavant dans le monde du jeu vidéo. Les
 						joueurs ne sont plus assis à des bureaux à regarder des

@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React, { FC, useEffect, useRef, useState } from 'react';
 
-const Statistics = () => {
+const Statistics: FC = () => {
 	const stats = [
 		{
 			num: '2022',
@@ -19,30 +19,39 @@ const Statistics = () => {
 		},
 	];
 	const delay = 3000;
-	const timeoutRef = React.useRef(0);
-	function resetTimeout() {
-		if (timeoutRef.current) {
-			clearTimeout(timeoutRef.current);
+	const timeoutRef = useRef(0);
+	const resetTimeout = () => clearTimeout(timeoutRef.current);
+
+	const [index, setIndex] = useState(0);
+	const [isSliderActive, setIsSliderActive] = useState(false);
+
+	useEffect(() => {
+		if (!isSliderActive) {
+			resetTimeout();
+			setIndex(0);
+			return;
 		}
-	}
-
-	const [index, setIndex] = React.useState(0);
-
-	React.useEffect(() => {
 		resetTimeout();
 		timeoutRef.current = setTimeout(
-			() =>
-				setIndex((prevIndex) =>
-					prevIndex === stats.length - 1 ? 0 : prevIndex + 1
-				),
+			() => setIndex((prevIndex) => (prevIndex + 1) % stats.length),
 			delay
 		);
-	}, [index]);
+	}, [index, isSliderActive]);
+
+	useEffect(() => {
+		const handleResize: EventListener = (_event) => {
+			setIsSliderActive(window.innerWidth <= 450);
+		};
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
 
 	return (
 		<div className="SLIDESHOW mx-auto my-0 overflow-hidden max-w-[250px] min-[450px]:max-w-[800px] min-[450px]:overflow-visible md:py-[80px]">
 			<div
-				className={`SLIDESHOWSLIDER whitespace-nowrap transition-transform ease-in-out duration-[1000ms] min-[450px]:transform-none translate-x-[-${index}00%] min-[450px]:flex  min-[450px]:justify-around `}
+				className={`SLIDESHOWSLIDER whitespace-nowrap transition-transform ease-in-out duration-[1000ms] min-[450px]:transform-none min-[450px]:flex min-[450px]:justify-around `}
+				style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
 			>
 				{stats.map((stat, id) => {
 					return (
@@ -74,24 +83,6 @@ const Statistics = () => {
 			</div>
 		</div>
 	);
-
-	{
-		/* <div className="select-none max-w-[800px] m-auto flex justify-around py-[20px] md:py-[80px]">
-					{stats.map((stat) => {
-						return (
-							<div
-								key={stat.text}
-								className="min-w-[150px] inline-block font-bold"
-							>
-								<p className="text-[80px] leading-[60px] text-center">
-									{stat.num}
-								</p>
-								<p className="text-[20px] text-center">{stat.text}</p>
-							</div>
-						);
-					})}
-				</div> */
-	}
 };
 
 export default Statistics;

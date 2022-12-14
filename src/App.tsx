@@ -14,7 +14,7 @@ const App = () => {
 			// console.log('window.scrollY', window.scrollY);
 			const nav = document.getElementById('nav');
 
-			if (window.scrollY > 100) {
+			if (window.scrollY > 10) {
 				if (nav) nav.style.backgroundColor = 'rgba(25,25,25,1)';
 			} else {
 				if (nav) nav.style.backgroundColor = 'rgba(25,25,25,0)';
