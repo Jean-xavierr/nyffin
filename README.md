@@ -1,5 +1,7 @@
 # Nyffin
 
+> **The project is now hosted on [Gitlab](https://gitlab.com/mli42/nyffin)!**
+
 This webapp is deployed on www.nyffin.com
 
 Boilerplate from: [Vite + React + Tailwind CSS + Typescript starter](https://github.com/wobsoriano/vite-react-tailwind-starter)
