@@ -13,7 +13,7 @@ const Statistics: FC = () => {
 			order: 'min-[450px]:order-1 md:order-2',
 		},
 		{
-			num: '5',
+			num: '7',
 			text: 'PLAYERS',
 			order: 'min-[450px]:order-3 md:order-3',
 		},
